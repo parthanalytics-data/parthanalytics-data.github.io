@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superstore Sales Dashboard</title>
+    <style>
+        body{
+    font-family: Arial, sans-serif;
+    font-size: x-large;
+    margin: 15px;
+    padding: 20px;
+    background:#0f172a;
+    color:white
+}
+h2{
+    text-align: center;
+    font-size: 50px;
+    color: #38bdf8;
+}
+h3{
+    text-align: center;
+    font-size: 40px;
+}
+.gallery{
+    display:flex;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.gallery img{
+    width:400px;
+    height:250px;
+    object-fit:cover;
+    cursor:pointer;
+    border-radius:10px;
+    border:2px solid #ccc;
+    margin: -5px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* Popup */
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+}
+
+.popup img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+/* PROJECTS */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.project{
+background:#1e293b;
+color: white;
+text-align: center;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.project:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #38bdf8;
+}
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 60px; text-align: center; color: #38bdf8;">SUPERSTORE SALES DASHBOARD ANALYSIS</h1>
+    <section id="projects">
+    <div class="projects-grid">
+    <div class="project" style="text-align: left;">
+    <div style="font-size: 25px;">
+    <p style="font-family: 'Times New Roman', Times, serif;"><b>Role:</b> Data Analyst | MIS Executive <br>
+    <b>Project Type:</b> Sales Dashboard <br>
+    <b>Tools:</b> Excel, Pivot Tables, Pivot Charts, Slicers <br>
+    <b>Dataset Size:</b> 9,800 Orders</p>
+    </div>
+        </div>
+    </div>
+    </section>
+    
+    <h2>Project Objectives</h2>
+    <section id="projects">
+    <div class="projects-grid">
+        <div class="project" style="text-align: left;">
+    <p>The objective of this Project was to analyze per month sales performance, customer segment, regional performance and product categories to identify growth opportunities and support business decisions.</p>      </div>
+    </div>
+    </section>
+    <h2>Executive Summary</h2>
+        <section id="projects">
+    <div class="projects-grid">
+        <div class="project" style="text-align: left;">
+    <p>This project involved the creation of a comprehensive sales dashboard for a superstore, utilizing Excel's powerful data analysis and visualization capabilities. The dashboard provides insights into sales trends, customer behavior, and product performance, enabling stakeholders to make informed business decisions.</p>
+    
+        </div>
+    </div>
+    </section>
+    <h2>Dataset Information</h2>
+    <h3>Column Used in this Analysis</h3>
+    <section id="projects">
+    <div class="projects-grid">
+        <div class="project" style="text-align: left;">
+            <p>The following columns were used in this analysis:</p>
+    <ul>
+        <li>Order ID</li>
+        <li>Order Date</li>
+        <li>Ship Date</li>
+        <li>Ship Mode</li>
+        <li>Customer ID</li>
+        <li>Customer Name</li>
+        <li>Segment</li>
+        <li>Country</li>
+        <li>City</li>
+        <li>State</li>
+        <li>Postal Code</li>
+        <li>Region</li>
+        <li>Product ID</li>
+        <li>Category</li>
+        <li>Sub-Category</li>
+        <li>Product Name</li>
+        <li>Sales</li>
+    </ul>
+        </div>
+    </div>
+    </section>
+    
+    <h2>Data Preparation Steps</h2>
+    <section id="projects">
+    <div class="projects-grid">
+        <div class="project" style="text-align: left;">
+            <p>The following steps were followed to prepare the data:</p>
+    <ul>
+        <li>Handle missing values</li>
+        <li>Remove duplicates</li>
+        <li>Convert data types</li>
+        <li>Create new Column for calculation (e.g., month, year)</li>
+        <li>Create KPI Cards</li>
+        <li>Built Pivot tables</li>
+        <li>Use Dynamic Slicers</li>
+    </ul>
+        </div>
+    </div>
+    </section>
+    <h2>Dashboard Image</h2>
+    <img src="Sales_Dashboard.png" alt="Superstore Sales Dashboard" style="width:100%; max-width: 1600px; height: 800px; border:2px solid black;"><br><br>
+    <H2>Dashboard Features</H2>
+    <h3>Interactive Visual Charts Used in Dashboard</h3>
+    <div class="gallery">
+        <div>
+            <img src="Monthly Sales.PNG" onclick="openImage(this.src)">
+            <h3 style="text-align: center;">Monthly Sales</h3>
+        </div>
+        <div>
+            <img src="Segment_Wise_Sales.PNG" onclick="openImage(this.src)">
+            <h3 style="text-align: center;">Segment Wise Sales</h3>
+        </div>
+        <div>
+            <img src="Category_Wise_Sales.PNG" onclick="openImage(this.src)">
+            <h3 style="text-align: center;">Category Wise Sales</h3>
+        </div>
+        <div>
+            <img src="Top_10_Customers.PNG" onclick="openImage(this.src)">
+            <h3 style="text-align: center;">Top 10 Customers</h3>
+        </div>
+        <div>
+            <img src="Top_10_Products.PNG" onclick="openImage(this.src)">
+            <h3 style="text-align: center;">Top 10 Products</h3>
+        </div>
+        <div>
+            <img src="Sales_By_Region.PNG" onclick="openImage(this.src)">
+            <h3 style="text-align: center;">Sales By Region</h3>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img id="popupImg">
+    </div>
+    <section id="projects">
+    <h3 class="section-title">Key KPIs</h3>
+    <div class="projects-grid">
+        <div class="project">
+            <h3>Total Sales </h3>
+            <p>$2,261,537</p>
+        </div>
+        <div class="project">
+            <h3>Total Orders </h3>
+            <p>9,800</p>
+        </div>
+        <div class="project">
+            <h3>Total Customers </h3>
+            <p>793</p>
+        </div>
+        <div class="project">
+            <h3>Average Orders/Customer </h3>
+            <p>12.36</p>
+        </div>
+    </div>
+    </section>
+    <h3>Dynamic Slicers</h3>
+    <section id="projects">
+    <div class="projects-grid">
+        <div class="project">
+            <h3>Segment Slicers </h3>
+        </div>
+        <div class="project">
+            <h3>Monthly slicers </h3>
+        </div>
+        <div class="project">
+            <h3>Category Slicers</h3>
+        </div>
+        <div class="project">
+            <h3>Region Slicers</h3>
+        </div>
+    </div>
+    </section>
+    <h2>Business Insights</h2>
+    <section id="projects">
+    <div class="projects-grid">
+        <div class="project" style="text-align: left;">
+          <p>This dashboard provides a comprehensive view of the superstore's sales performance across different dimensions. Key insights include:</p>
+        <ul>
+        <li>West Bengal generates highest sales.</li>
+        <li>Customer retention appears to be quite strong because customers are making repeat purchases.</li>
+        <li>The sales distribution is balanced, but the Technology category is the largest contributor to revenue.</li>
+        <li>The business is heavily dependent on the Consumer segment.</li>
+        </ul>  
+    </div>
+    </div>
+    </section>
+    
+    <h2>Business Recommendations</h2>
+    <section id="projects">
+    <div class="projects-grid">
+        <div class="project" style="text-align: left;">
+          <p>Based on the analysis, the following recommendations are proposed:</p>
+    <ul>
+        <li>The successful strategies implemented in the West region can be replicated in the South region.</li>
+        <li>Greater focus can be placed on the inventory and promotion of Technology products.</li>
+        <li>Special offers and bulk-order programs can be launched for corporate and Home Office customers.</li>
+        <li>Launching loyalty programs and personalized offers could be beneficial.</li>
+    </ul>  
+    </div>
+    </div>
+    </section>
+    
+    <h2>Skill Demonstrated</h2>
+    <section id="projects">
+    <div class="projects-grid">
+        <div class="project" style="text-align: left;">
+        <p>This project demonstrates the following skills:</p>
+        <ul>
+        <li>Data cleaning and preprocessing</li>
+        <li>Exploratory data analysis</li>
+        <li>Dashboard creation and visualization</li>
+        <li>Interactive reporting with dynamic slicers</li>
+        <li>Problem Solving</li>
+        <li>Excel Automation</li>
+        </ul>
+    </div>
+    </div>
+    </section>
+    
+    <h2>What I Learned</h2>
+    <section id="projects">
+    <div class="projects-grid">
+        <div class="project" style="text-align: left;">
+    <p>Through this project, I learned how to transform raw sales data into meaningful business insights using Excel dashboards, Pivot Tables, and interactive visualizations.</p>
+        </div>
+    </div>
+    </section>
+    <script>
+    function openImage(src){
+        document.getElementById("popup").style.display = "flex";
+        document.getElementById("popupImg").src = src;
+    }
+
+    function closeImage(){
+        document.getElementById("popup").style.display = "none";
+    }
+    </script>
+</body>
+</html>
